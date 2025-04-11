@@ -1,0 +1,845 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    color: #3A5A8E;
+    position: relative;
+    z-index: 20; /* Más arriba que el menú */
+}
+
+/* Estilos al activar menú en móvil */
+.menuItems.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #fff;
+    padding: 10px;
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menuItems {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin-right: 70px;
+        }
+    }
+    li a {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: #3A5A8E;
+    }
+    li:hover {
+        color: #3A5A8E;
+        text-decoration: wavy underline;
+        transition: all 0.3s ease;
+    }
+}
+
+.banner-principal {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 500px;
+
+    .banner-texts {
+        width: 70%;
+        margin-left: 80px;
+    }
+
+    .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            color: #3A5A8E;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 40px;
+        }
+    }
+
+    .banner-images {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        height: 100%;
+        margin-right: 80px;
+
+        img {
+            width: 30%;
+            border-radius: 20px;
+        }
+    }
+}
+
+.servicios {
+    background-color: #f2f2f2;
+    padding: 40px;
+
+    h3 {
+        padding-top: 50px;
+        text-align: center;
+        color: #3A5A8E;
+    }
+
+    h1 {
+        text-align: center;
+        padding-bottom: 40px;
+        padding-top: 10px;
+    }
+
+    .servicios-cards {
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        width: 30%;
+        height: 600px;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+        }
+
+        .card-texts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            height: 200px;
+
+            h2 {
+                color: #333;
+                margin-bottom: 50px;
+            }
+            p {
+                color: #333;
+                text-align: center;
+            }
+
+            h3 {
+                color: #333;
+            }
+
+            p {
+                color: #333;
+            }
+        }
+        button {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #636262;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+        background-color: #597eb9;
+    }
+}
+
+.contacto {
+    background-color: #f2f2f2;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        text-align: center;
+        color: #3A5A8E;
+    }
+
+    h1 {
+        text-align: center;
+        padding-bottom: 40px;
+        padding-top: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .contacto-formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #636262;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.footer {
+    background-color: #fff;
+    padding: 40px;
+    align-items: center;
+
+    .footer-texts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        h6 {
+            color: #3A5A8E;
+        }
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .footer-redes {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        img {
+            width: 30px;
+        }
+    }
+}
+
+/* MEDIA QUERIES RESPONSIVAS */
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menuItems {
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .menuItems ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        margin: 0;
+        background-color: #fff;
+    }
+
+    .servicios-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        transition: all 0.3s ease;
+        min-height: 250px;
+        max-height: 350px;
+        overflow: hidden;
+    }
+
+    .card.open {
+        max-height: 600px; /* o lo que necesites según el contenido */
+    }
+
+    .card {
+        width: 80% !important;
+        height: auto;
+        padding: 10px;
+        gap: 40px;
+        transition: all 0.3s ease;
+        min-height: 250px;
+        max-height: 350px;
+        overflow: hidden;
+    }
+
+    .card-texts {
+        gap: 5px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .card button {
+        font-size: 14px;
+        height: 28px;
+    }
+
+    .card-desc {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .card-desc.open {
+        max-height: 500px; /* Ajustá según el contenido */
+    }
+
+    .arrow {
+        float: right;
+        transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+        transform: rotate(180deg);
+    }
+
+    .card-title {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .servicios-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .card-desc {
+        max-height: unset !important;
+        overflow: visible;
+    }
+
+    /* Asegurémonos de que el acordeón y las flechas solo estén visibles en pantallas más pequeñas */
+
+    .card-desc {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .card-desc.open {
+        max-height: 500px;
+    }
+
+    .arrow {
+        display: none; /* No mostramos la flecha en pantallas grandes */
+    }
+
+    .card-title {
+        cursor: pointer;
+    }
+}
+
+/* Para pantallas grandes, el acordeón se desactiva completamente */
+@media screen and (min-width: 1025px) {
+    .card-desc {
+        max-height: unset !important;
+        overflow: visible !important;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+
+/* === ESTILOS AÑADIDOS === */
+
+/* Mostrar botón hamburguesa y menú colapsable en móviles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menuItems {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .menuItems.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menuItems ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  /* Cards más compactas y con espaciado razonable */
+  .servicios-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90% !important;
+    margin: 10px auto;
+    padding: 10px;
+    gap: 16px;
+    min-height: auto;
+    max-height: 350px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .card.open {
+    max-height: 800px;
+  }
+
+  .card-texts {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .card-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .card-desc.open {
+    max-height: 500px;
+  }
+
+  .card-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arrow {
+    float: right;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow.rotate {
+    transform: rotate(180deg);
+  }
+}
+
+/* En pantallas grandes: mostrar cards expandidas y sin flecha */
+@media screen and (min-width: 769px) {
+  .card-desc {
+    max-height: unset !important;
+    overflow: visible !important;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .card-title {
+    cursor: default;
+  }
+}
+
+/* === MEJORAS DE CENTRADO EN MÓVILES Y TABLETS PARA BANNER === */
+
+/* Móviles */
+@media screen and (max-width: 768px) {
+  .banner-principal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .banner-texts {
+    width: 100%;
+    margin-left: 0 !important;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .texts {
+    align-items: center;
+  }
+
+  .texts h1 {
+    font-size: 28px;
+  }
+
+  .texts p {
+    font-size: 14px;
+  }
+
+  .banner-images {
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .banner-images img {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner-principal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .banner-texts {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .texts {
+    align-items: center;
+  }
+
+  .texts h1 {
+    font-size: 32px;
+  }
+
+  .texts p {
+    font-size: 16px;
+  }
+
+  .banner-images {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .banner-images img {
+    width: 45%;
+    max-width: 350px;
+    border-radius: 12px;
+  }
+}
+
+/* === FIX: Imágenes de servicios restauradas === */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* === FIX: Centrado real de banner-principal en móviles y tablets === */
+
+/* Móviles */
+@media screen and (max-width: 768px) {
+  .banner-principal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .banner-texts {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .texts {
+    align-items: center;
+  }
+
+  .banner-images {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+
+  .banner-images img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner-principal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .banner-texts {
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;
+  }
+
+  .texts {
+    align-items: center;
+  }
+
+  .banner-images {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .banner-images img {
+    width: 45%;
+    max-width: 350px;
+    border-radius: 12px;
+  }
+}
+
+/* Ocultar imágenes del banner en mobile y tablet */
+@media screen and (max-width: 1024px) {
+  .banner-images {
+    display: none;
+  }
+}
+
+/* Asegurar comportamiento móvil (acordeón) también en tablets */
+@media screen and (max-width: 1024px) {
+  .card {
+    transition: all 0.3s ease;
+    min-height: 250px;
+    max-height: 350px;
+    overflow: hidden;
+  }
+
+  .card.open {
+    max-height: 600px;
+  }
+
+  .card-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .card-desc.open {
+    max-height: 500px;
+  }
+
+  .arrow {
+    display: inline-block;
+  }
+
+  .arrow.rotate {
+    transform: rotate(180deg);
+  }
+
+  .card-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+/* Ocultar imágenes del banner en mobile y tablet */
+@media screen and (max-width: 1024px) {
+  .banner-images {
+    display: none !important;
+  }
+}
+
+/* Forzar comportamiento de acordeón hasta 1024px */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 90% !important;
+    margin: 10px auto;
+    padding: 10px;
+    gap: 16px;
+    min-height: auto;
+    max-height: 350px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .card.open {
+    max-height: 800px;
+  }
+
+  .card-texts {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .card-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .card-desc.open {
+    max-height: 500px;
+  }
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow.rotate {
+    transform: rotate(180deg);
+  }
+
+  .card-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card img {
+    max-height: 180px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+  }
+}
