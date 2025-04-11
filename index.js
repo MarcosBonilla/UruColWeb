@@ -32,3 +32,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+function abrirFormulario(servicio) {
+    const contacto = document.getElementById("Contacto");
+    if (contacto) {
+      contacto.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    setTimeout(() => {
+      const textarea = document.querySelector("textarea[name='mensaje']");
+      if (textarea) {
+        textarea.value = `Hola, estoy interesado en el servicio de ${servicio}. Me gustaría recibir un presupuesto.`;
+      }
+    }, 500);
+  }
