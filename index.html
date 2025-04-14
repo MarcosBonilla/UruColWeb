@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <script defer src="../js/index.js"></script>
     <title>UruCol</title>
 </head>
 <body>
 
     <header class="header">
         <div class="header-logo">
-            <img src="logo.jpg" alt="Logo de UruCol">
+            <img src="../img/logo.jpeg" alt="Logo de UruCol">
         </div>
     
         <!-- Botón hamburguesa -->
@@ -33,13 +33,13 @@
                     <h3>UruCol</h3>
                     <h1>Construyendo un futuro</h1>
                     <p>
-                        En Urucol, somos especialistas en construcción con años de experiencia en reformas, rehabilitación y mantenimiento. Nos comprometemos con cada proyecto, grande o pequeño, ofreciendo soluciones duraderas, limpias y a medida.
+                        En Urucol, somos especialistas en construcción con años de experiencia en reformas, rehabilitaciones y mantenimiento. Nos comprometemos con cada proyecto, grande o pequeño, ofreciendo soluciones duraderas, limpias y a medida.
                     </p>
                 </div>
             </div>
             <div class="banner-images">
-                <img src="ejemplo2.webp" alt="Obra en construcción">
-                <img src="ejemplo2alb.jpg" alt="Ejemplo de trabajo finalizado">
+                <img src="../img/mainIMG1.png" alt="Obra en construcción">
+                <img src="../img/mainIMG2.png" alt="Ejemplo de trabajo finalizado">
             </div>
         </section>
 
@@ -52,7 +52,7 @@
                 <!-- Puedes usar una clase común para cada card para modular en CSS -->
                 <!-- Aquí un ejemplo, el resto es similar -->
                 <article class="card">
-                    <img src="ejemplo2alb.jpg" alt="Reformas">
+                    <img src="../img/reforma.png" alt="Reformas">
                     <div class="card-texts">
                         <h2 class="card-title">Reformas<span class="arrow">&#9660;</span></h2>
                         <p class="card-desc">Transformamos espacios residenciales y comerciales con soluciones a medida, mejorando funcionalidad, estética y valor del inmueble.</p>
@@ -61,7 +61,7 @@
                 </article>
 
                 <article class="card">
-                    <img src="ejemplo2alb.jpg" alt="Diseño de espacios">
+                    <img src="../img/diseño.png" alt="Diseño de espacios">
                     <div class="card-texts">
                         <h2 class="card-title">Diseño<span class="arrow">&#9660;</span></h2>
                         <p class="card-desc">Desarrollamos propuestas creativas y funcionales para optimizar el uso del espacio, adaptadas a las necesidades y gustos del cliente.</p>
@@ -70,7 +70,7 @@
                 </article>
 
                 <article class="card">
-                    <img src="ejemplo2alb.jpg" alt="Planimetría técnica">
+                    <img src="../img/planimetria.png" alt="Planimetría técnica">
                     <div class="card-texts">
                         <h2 class="card-title">Planimetría<span class="arrow">&#9660;</span></h2>
                         <p class="card-desc">Elaboramos planos técnicos detallados que sirven como base para proyectos de construcción, reformas o regularizaciones.</p>
@@ -81,7 +81,7 @@
 
             <div class="servicios-cards">
                 <article class="card">
-                    <img src="ejemplo2alb.jpg" alt="Refuerzos estructurales">
+                    <img src="../img/reformas estructurales.png" alt="Refuerzos estructurales">
                     <div class="card-texts">
                         <h2 class="card-title">Refuerzos estructurales<span class="arrow">&#9660;</span></h2>
                         <p class="card-desc">Reforzamos elementos constructivos para garantizar la seguridad y estabilidad de estructuras existentes, cumpliendo con los estándares técnicos vigentes.</p>
@@ -90,7 +90,7 @@
                 </article>
 
                 <article class="card">
-                    <img src="ejemplo2alb.jpg" alt="Levantamientos topográficos">
+                    <img src="../img/levantamientos.png" alt="Levantamientos topográficos">
                     <div class="card-texts">
                         <h2 class="card-title">Levantamientos<span class="arrow">&#9660;</span></h2>
                         <p class="card-desc">Realizamos levantamientos arquitectónicos y topográficos precisos para documentar el estado actual de una edificación o terreno.</p>
@@ -99,7 +99,7 @@
                 </article>
 
                 <article class="card">
-                    <img src="ejemplo2alb.jpg" alt="Demoliciones controladas">
+                    <img src="../img/demolicion.png" alt="Demoliciones controladas">
                     <div class="card-texts">
                         <h2 class="card-title">Demoliciones<span class="arrow">&#9660;</span></h2>
                         <p class="card-desc">Realizamos demoliciones seguras y controladas de estructuras parciales o completas, respetando todas las normativas y minimizando el impacto en el entorno.</p>
@@ -114,7 +114,7 @@
                 <div class="formulario">
                     <h3>¡Pídenos presupuesto!</h3>
                     <h1>Contacto</h1>
-                    <form action="#" method="post">
+                    <form action="form-handler.php" method="post">
                         <input type="text" name="nombre" placeholder="Nombre" required>
                         <input type="email" name="email" placeholder="Email" required>
                         <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
@@ -122,24 +122,36 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section>        
+        <!-- Mensaje de resultado -->
+        <?php if (isset($_GET['status'])): ?>
+            <div class="form-status">
+                <?php if ($_GET['status'] === 'ok'): ?>
+                    <p class="success">✅ ¡Mensaje enviado correctamente!</p>
+                <?php elseif ($_GET['status'] === 'error'): ?>
+                    <p class="error">❌ Hubo un problema al enviar el mensaje. Inténtalo de nuevo.</p>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
     </main>
 
     <footer class="footer">
         <div class="footer-texts">
-            <img src="logo.jpg" alt="Logo de UruCol">
+            <img src="../img/logo.jpeg" alt="Logo de UruCol">
             <h6>UruCol</h6>
             <p>© 2025 UruCol. Todos los derechos reservados.</p>
-            <p>Servicios de albañilería, reformas y construcción en la Comunidad Valenciana.</p>
-            <p>📞 Tel: [número] | ✉️ Email: [correo electrónico]</p>
+            <p>Servicios de construccion, reformas y pladures en la Comunidad Valenciana.</p>
+            <p>📞 Tel: +34 615 14 21 77</p>
+            <p>✉️ Email: Mauro.Caraballo@live.com</p>
             <p>Diseñado con dedicación, construido con confianza.</p>
         </div>
         <div class="footer-redes">
             <a href="https://www.instagram.com/mauro_rosemberg/" target="_blank">
-                <img src="instagram.png" alt="Instagram de UruCol">
+                <img src="../img/instagram.png" alt="Instagram de UruCol">
             </a>
-            <a href="https://wa.me/34600123456" target="_blank">
-                <img src="whatsapp.png" alt="WhatsApp de UruCol">
+            <a href="https://wa.me/+34615142177" target="_blank">
+                <img src="../img/whatsapp.png" alt="WhatsApp de UruCol">
             </a>
         </div>
     </footer>
